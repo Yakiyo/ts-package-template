@@ -2,28 +2,21 @@
   "name": "ts-package-template",
   "version": "1.0.0",
   "description": "Simple template for creating npm packages with typescript",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "types": "lib/typings",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./lib/esm/index.js",
-      "require": "./lib/cjs/index.js",
-      "node": "./lib/cjs/index.js",
-      "default": "./lib/esm/index.js"
-    }
-  },
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf lib/ && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "test": "node test/test.cjs && node test/test.mjs",
+    "build": "rm -rf lib/ && tsc",
     "lint": "eslint . --ext .ts",
     "husk": "husky install",
     "lint:fix": "eslint . --ext .ts --fix",
     "prepublishOnly": "npm run lint && npm run build",
     "postinstall": "npm run build && npm run husk",
     "pretty:w": "prettier --write **/*.ts",
-    "pretty:c": "prettier --check **/*.ts"
+    "pretty:c": "prettier --check **/*.ts",
+    "lint-stage": "lint-staged"
   },
   "keywords": [
     "template",
@@ -39,6 +32,7 @@
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "typescript": "4.7"
   },
@@ -53,5 +47,11 @@
     "singleQuote": true,
     "bracketSpacing": true,
     "endOfLine": "lf"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "npm run pretty:c"
+    ]
   }
 }
