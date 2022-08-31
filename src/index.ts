@@ -1,3 +1,3 @@
-export class Package {}
+class Package {}
 
-export default Package;
+export = Package;
