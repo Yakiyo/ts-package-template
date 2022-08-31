@@ -3,8 +3,7 @@
     "target": "esnext",                                                             
     "rootDir": "./src",                              
     "moduleResolution": "node",                      
-    "declaration": true,                                                        
-    "removeComments": true,                          
+    "declaration": true,                                                                                  
     "declarationDir": "./lib/typings",               
     "esModuleInterop": true,                      
     "forceConsistentCasingInFileNames": true,        
@@ -12,7 +11,9 @@
     "noImplicitAny": true,                           
     "noUnusedLocals": true,                          
     "noUnusedParameters": true,                      
-    "noImplicitReturns": true,                       
+    "noImplicitReturns": true,
+    "module": "CommonJS",
+    "outDir": "./lib/"                      
   },
   "include": [
     "src/"
