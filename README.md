@@ -17,12 +17,15 @@ This is a simple template repository I use for creating npm packages with typesc
 ### Locally
 [Generate](https://github.com/Yakiyo/ts-package-template/generate) from the template.
 
-Clone it with git and install.
+Clone it with git and install. Then run setup.
 ```bash
 $ git clone https://github.com/<username>/<repo-name>.git
 
 # use npm if u don't have pnpm
 $ pnpm install
+
+# again, use npm if u don't have pnpm. This builds the files and sets up husky
+$ pnpm run setup
 ```
 Edit [package.json](./package.json) as per your project.
 Make your package. Remove everything in Readme from here to top. 
