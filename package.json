@@ -4,6 +4,10 @@
   "description": "Simple template for creating npm packages with typescript",
   "main": "lib/index.js",
   "module": "lib/index.js",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.js"
+  },
   "types": "lib/typings",
   "type": "commonjs",
   "scripts": {
