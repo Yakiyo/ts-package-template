@@ -13,7 +13,8 @@
     "noUnusedParameters": true,                      
     "noImplicitReturns": true,
     "module": "CommonJS",
-    "outDir": "./lib/"                      
+    "outDir": "./lib/",
+    "importHelpers": true                    
   },
   "include": [
     "src/"
