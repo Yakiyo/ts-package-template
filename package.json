@@ -13,7 +13,7 @@
     "husk": "husky install",
     "lint:fix": "eslint . --ext .ts --fix",
     "prepublishOnly": "npm run lint && npm run build",
-    "postinstall": "npm run build && npm run husk",
+    "setup": "npm run build && npm run husk",
     "pretty:w": "prettier --write **/*.ts",
     "pretty:c": "prettier --check **/*.ts",
     "lint-stage": "lint-staged"
