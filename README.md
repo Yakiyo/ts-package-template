@@ -1,5 +1,5 @@
 # TS + npm package template
-<div align="center"><img src="https://github.com/Yakiyo/ts-package-template/actions/workflows/build.yml/badge.svg"> <img src="https://github.com/Yakiyo/ts-package-template/actions/workflows/lint.yml/badge.svg"></div>
+<div align="center"> <img src="https://github.com/Yakiyo/ts-package-template/actions/workflows/ci.yml/badge.svg"></div>
 <div align="center">
 <a href="https://gitpod.io/from-referrer/"><img src="https://svgshare.com/i/r28.svg" alt="Open on gitpod https://gitpod.io/from-referrer/"></a>
 </div>
