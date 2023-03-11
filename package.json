@@ -12,14 +12,12 @@
   "type": "commonjs",
   "scripts": {
     "test": "node test/test.cjs && node test/test.mjs",
-    "build": "rm -rf lib/ && tsc",
-    "lint": "eslint . --ext .ts",
+    "build": "tsc",
+    "lint": "rome check .",
     "husk": "husky install",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "prepublishOnly": "npm run lint && npm run build",
-    "setup": "npm run build && npm run husk",
-    "pretty:w": "prettier --write **/*.ts",
-    "pretty:c": "prettier --check **/*.ts",
+    "prepublishOnly": "rome ci . && rm -rf lib/ && tsc",
+    "prepare": "tsc && husky install",
+    "format": "rome format --write .",
     "lint-stage": "lint-staged"
   },
   "keywords": [
