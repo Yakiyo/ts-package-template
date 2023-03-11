@@ -1,4 +1,4 @@
-name: ESLint & Prettier
+name: CI
 on: [push, pull_request]
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
           node-version: '14.x'
       - name: Install Packages
         run: npm install
-      - name: Run Prettier
-        run: npm run pretty:c
-      - name: Lint Files
-        run: npm run lint
+      - name: Lint and Format
+        run: npx rome ci .
+      - name: Test Files
+        run: npm run test
